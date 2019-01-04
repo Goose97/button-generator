@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Aleo:300,300i,400,400i,700,700i"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="menu__wraper">
+      <div class="menu__item" id="shape">
+        <a href="#shape"><i class="fas fa-angle-down"></i>Shape</a>
+        <div class="menu__inner-content">
+          <ul>
+            <li>Width: <input type="number" id="width" /> px</li>
+            <li>Height: <input type="number" id="height" /> px</li>
+            <li>Border Radius: <input type="number" id="borderRadius" /> px</li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu__item" id="text">
+        <a href="#text"><i class="fas fa-angle-down"></i>Text</a>
+        <div class="menu__inner-content">
+          <ul>
+            <li>Inner text: <input type="text" id="innerText" /></li>
+            <li>Text Color: <input type="color" id="innerTextColor" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu__item" id="color">
+        <a href="#color"><i class="fas fa-angle-down"></i>Color</a>
+        <div class="menu__inner-content">
+          <ul>
+            <li>
+              Fill Style:
+              <select name="" id="fillStyle">
+                <option value="Solid">Solid</option>
+                <option value="Gradient">Gradient</option>
+              </select>
+            </li>
+            <li id="gradientDirectionWraper">
+              Gradient Direction:
+              <select name="" id="gradientDirection">
+                <option value="From Left To Right">From Left To Right</option>
+                <option value="From Right To Left">From Right To Left</option>
+                <option value="From Top To Bottom">From Top To Bottom</option>
+                <option value="From Bottom To Top">From Bottom To Top</option>
+              </select>
+            </li>
+            <li>Color: <input type="color" id="backgroundColor1" /></li>
+            <li id="backgroundColor2Wraper">
+              Color 2: <input type="color" id="backgroundColor2" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu__item" id="border">
+        <a href="#border"><i class="fas fa-angle-down"></i>Border</a>
+        <div class="menu__inner-content">
+          <ul>
+            <li>Border Width: <input type="number" id="borderWidth" /> px</li>
+            <li>
+              Border Style:
+              <select name="" id="borderStyle">
+                <option value="None">None</option>
+                <option value="Solid">Solid</option>
+                <option value="Double">Double</option>
+                <option value="Dotted">Dotted</option>
+                <option value="Dashed">Dashed</option>
+              </select>
+            </li>
+            <li>Border Color: <input type="color" id="borderColor" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu__item" id="shadow">
+        <a href="#shadow"><i class="fas fa-angle-down"></i>Shadow</a>
+        <div class="menu__inner-content">
+          <ul>
+            <li>X Offset: <input type="number" id="shadowXOffset" /> px</li>
+            <li>Y Offset: <input type="number" id="shadowYOffset" /> px</li>
+            <li>
+              Blur Radius: <input type="number" id="shadowBlurRadius" /> px
+            </li>
+            <li>
+              Spread Radius: <input type="number" id="shadowSpreadRadius" /> px
+            </li>
+            <li>Shadow Color: <input type="color" id="shadowColor" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu__item" id="effect">
+        <a href="#effect"><i class="fas fa-angle-down"></i>Hover Effect</a>
+      </div>
+    </div>
+    <div class="screen__wraper">
+      <button class="screen__showcase-button">Button</button>
+      <span class="screen__instruction">Click the button to copy</span>
+      <div class="popup-modal__wraper">
+        <div class="popup-modal__html">
+          <p>HTML</p>
+          <pre class="prettyprint" id="html" style="color:white"></pre>
+        </div>
+        <div class="popup-modal__css">
+          <p>CSS</p>
+          <pre class="prettyprint" id="css" style="color:white"></pre>
+        </div>
+        <a class="popup-modal__close-button">
+          <i class="fas fa-times-circle"></i>
+        </a>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</html>

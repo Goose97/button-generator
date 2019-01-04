@@ -1,0 +1,337 @@
+/* Pretty printing styles. Used with prettify.js. */
+/* Vim sunburst theme by David Leibovic */
+
+pre .str,
+code .str {
+  color: #65b042;
+} /* string  - green */
+pre .kwd,
+code .kwd {
+  color: #e28964;
+} /* keyword - dark pink */
+pre .com,
+code .com {
+  color: #aeaeae;
+  font-style: italic;
+} /* comment - gray */
+pre .typ,
+code .typ {
+  color: #89bdff;
+} /* type - light blue */
+pre .lit,
+code .lit {
+  color: #3387cc;
+} /* literal - blue */
+pre .pun,
+code .pun {
+  color: #fff;
+} /* punctuation - white */
+pre .pln,
+code .pln {
+  color: #fff;
+} /* plaintext - white */
+pre .tag,
+code .tag {
+  color: #89bdff;
+} /* html/xml tag    - light blue */
+pre .atn,
+code .atn {
+  color: #bdb76b;
+} /* html/xml attribute name  - khaki */
+pre .atv,
+code .atv {
+  color: #65b042;
+} /* html/xml attribute value - green */
+pre .dec,
+code .dec {
+  color: #3387cc;
+} /* decimal - blue */
+
+pre.prettyprint,
+code.prettyprint {
+  background-color: #000;
+  border-radius: 8px;
+}
+
+pre.prettyprint {
+  width: 95%;
+  margin: 1em auto;
+  padding: 1em;
+  white-space: pre-wrap;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #aeaeae;
+} /* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 {
+  list-style-type: none;
+}
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+}
+
+@media print {
+  pre .str,
+  code .str {
+    color: #060;
+  }
+  pre .kwd,
+  code .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+  pre .com,
+  code .com {
+    color: #600;
+    font-style: italic;
+  }
+  pre .typ,
+  code .typ {
+    color: #404;
+    font-weight: bold;
+  }
+  pre .lit,
+  code .lit {
+    color: #044;
+  }
+  pre .pun,
+  code .pun {
+    color: #440;
+  }
+  pre .pln,
+  code .pln {
+    color: #000;
+  }
+  pre .tag,
+  code .tag {
+    color: #006;
+    font-weight: bold;
+  }
+  pre .atn,
+  code .atn {
+    color: #404;
+  }
+  pre .atv,
+  code .atv {
+    color: #060;
+  }
+}
+/*End Prettier code styling*/
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.menu__wraper {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  background-color: #2d3436;
+  box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.menu__item {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+  border-top: 0.5px solid rgba(0, 0, 0, 0.3);
+  font-family: "Aleo", serif;
+  font-size: 23px;
+  cursor: pointer;
+  list-style: none;
+  background-color: #2980b9;
+}
+
+.menu__item > a > i {
+  font-size: 23px;
+  margin-right: 15px;
+}
+
+.menu__item > a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  color: white;
+  font-weight: 300;
+  padding: 4%;
+}
+
+.menu__item:target .menu__inner-content {
+  max-height: 500px;
+}
+
+.menu__inner-content {
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.7s;
+}
+
+.menu__inner-content > ul {
+  list-style-type: none;
+  margin-top: 10px;
+  margin-left: 0;
+  color: white;
+  font-weight: 200;
+  background-color: #2d3436;
+  padding: 20px 50px;
+  margin: 0;
+}
+
+.menu__inner-content li {
+  padding: 10px;
+}
+
+.menu__inner-content li > input[type="number"] {
+  width: 12%;
+  height: 5%;
+  font-size: 21px;
+  padding-left: 5px;
+  font-family: "Aleo", serif;
+}
+
+.menu__inner-content li > input[type="text"] {
+  width: 35%;
+  height: 5%;
+  font-size: 21px;
+  padding-left: 5px;
+  font-family: "Aleo", serif;
+}
+
+.menu__inner-content li > input[type="color"] {
+  width: 15%;
+  height: 5%;
+}
+
+.menu__inner-content li > select {
+  width: 18%;
+  height: 5%;
+  font-size: 21px;
+  padding-left: 5px;
+  font-family: "Aleo", serif;
+}
+
+.menu__inner-content li > select[id="gradient-direction"] {
+  width: 40%;
+  height: 5%;
+  font-size: 21px;
+  padding-left: 5px;
+  font-family: "Aleo", serif;
+}
+
+.screen__wraper {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+  transform: scale(1);
+}
+
+.screen__showcase-button {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  max-width: 400px;
+  max-height: 400px;
+  transform: translateX(-50%) translateY(-50%);
+  transition: all 1s ease-in-out;
+  border: none;
+  font-family: "Aleo", serif;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.screen__instruction {
+  font-family: "Aleo", serif;
+  font-size: 27px;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 20px;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.popup-modal__wraper {
+  position: fixed;
+  height: 70%;
+  width: 70%;
+  left: 15%;
+  top: 15%;
+  background-color: #2d3436;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  display: none;
+  animation: modalAppear 0.7s;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.popup-modal__html {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  height: 25%;
+  padding: 0px 10px 10px 20px;
+}
+
+.popup-modal__css {
+  height: 75%;
+  padding: 00px 10px 10px 20px;
+}
+
+.popup-modal__wraper p {
+  font-family: "Aleo", serif;
+  font-size: 20px;
+  color: white;
+}
+
+.popup-modal__close-button {
+  position: absolute;
+  top: 3%;
+  right: 4%;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.menu__item[id="effect"] ul {
+  background-color: #2d3436;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#gradientDirectionWraper {
+  display: none;
+}
+
+#backgroundColor2Wraper {
+  display: none;
+}
